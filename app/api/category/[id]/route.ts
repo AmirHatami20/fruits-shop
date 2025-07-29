@@ -4,11 +4,14 @@ import {Category} from "@/lib/models/category";
 import {CategoryType} from "@/types";
 import mongoose from "mongoose";
 
-export async function DELETE(req: NextRequest, {params}: { params: { id: string } }) {
+export async function DELETE(
+    req: NextRequest,
+    {params}: { params: Promise<{ id: string }> }
+) {
     try {
         await connectDB();
 
-        const {id} = params;
+        const {id} = await params;
 
         if (!mongoose.Types.ObjectId.isValid(id)) {
             return NextResponse.json({error: "شناسه نامعتبر است."}, {status: 400});
@@ -21,17 +24,19 @@ export async function DELETE(req: NextRequest, {params}: { params: { id: string 
         }
 
         return NextResponse.json({message: "دسته‌بندی با موفقیت حذف شد."});
-    } catch (error) {
-        console.error("❌ Error deleting category:", error);
+    } catch {
         return NextResponse.json({error: "خطا در حذف دسته‌بندی."}, {status: 500});
     }
 }
 
-export async function PUT(req: NextRequest, {params}: { params: { id: string } }) {
+export async function PUT(
+    req: NextRequest,
+    {params}: { params: Promise<{ id: string }> }
+) {
     try {
         await connectDB();
 
-        const {id} = params;
+        const {id} = await params;
 
         if (!mongoose.Types.ObjectId.isValid(id)) {
             return NextResponse.json({error: "شناسه نامعتبر است."}, {status: 400});
@@ -46,8 +51,7 @@ export async function PUT(req: NextRequest, {params}: { params: { id: string } }
         }
 
         return NextResponse.json(updated);
-    } catch (error) {
-        console.error("❌ Error updating category:", error);
+    } catch {
         return NextResponse.json({error: "خطا در به‌روزرسانی دسته‌بندی."}, {status: 500});
     }
 }
