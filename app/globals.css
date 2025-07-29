@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer base {
+    input {
+        outline: none;
+    }
+
+    input::-ms-reveal {
+        display: none;
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
+
+@layer utilities {
+    .container {
+        margin-inline: auto;
+        position: relative;
+        width: 90% !important;
+
+        @variant sm {
+            max-width: 640px;
+        }
+        @variant md {
+            max-width: 768px;
+        }
+        @variant lg {
+            max-width: 1024px;
+        }
+        @variant xl {
+            max-width: 1280px !important;
+        }
+    }
+
+    .auth-input {
+        @apply w-full mt-1 bg-slate-200 px-2 py-1.5 rounded focus-within:outline-blue-300 text-shadow-xs;
+    }
+
+    .auth-button {
+        @apply max-w-[150px] mx-auto w-full bg-red-500 hover:bg-red-600 text-white cursor-pointer rounded-full text-xl font-medium text-center py-1 mt-3;
+    }
+
+}
