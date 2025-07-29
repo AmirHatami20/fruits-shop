@@ -2,10 +2,10 @@ import {Metadata} from "next";
 import Header from "@/components/Layout/Header";
 
 export const metadata: Metadata = {
-    title: 'My App with Redux',
+    title: 'احراز هویت در سایت ما',
     description: 'Redux + Next.js 15 setup',
     icons:{
-        icon:"/Logo.png",
+        icon:"/Logo.png"
     }
 };
 

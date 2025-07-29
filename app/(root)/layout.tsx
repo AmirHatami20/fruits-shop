@@ -1,11 +1,5 @@
-import {Metadata} from "next";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-
-export const metadata: Metadata = {
-    title: 'My App with Redux',
-    description: 'Redux + Next.js 15 setup',
-};
 
 export default function Layout({children}: { children: React.ReactNode }) {
     return (

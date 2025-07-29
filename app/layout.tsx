@@ -13,10 +13,10 @@ const vazirmatn = Vazirmatn({
 });
 
 export const metadata: Metadata = {
-    title: 'My App with Redux',
+    title: 'سایت فروش میوه جات',
     description: 'Redux + Next.js 15 setup',
     icons: {
-        icon: "./Logo.png"
+        icon: "/Logo.png"
     }
 };
 
