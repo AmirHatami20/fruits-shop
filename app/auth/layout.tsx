@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     title: 'احراز هویت در سایت ما',
     description: 'Redux + Next.js 15 setup',
     icons:{
-        icon:"/Logo.png"
+        icon:"/Logo.ico"
     }
 };
 
