@@ -148,7 +148,6 @@ export const productSlice = createSlice({
             .addCase(fetchProducts.rejected, (state, action) => {
                 state.loading.fetch = false;
                 state.error = action.error.message || 'خطا در دریافت اطلاعات';
-                toast.error(`خطا در دریافت محصولات: ${action.error.message}`);
             });
         // Fetch One
         builder
