@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     title: 'سایت فروش میوه جات',
     description: 'Redux + Next.js 15 setup',
     icons: {
-        icon: "/favicon.ico",
-        shortcut: "/favicon.ico",
+        icon: "/favicon2.ico",
+        shortcut: "/favicon2.ico",
         apple: "/apple-touch-icon.png",
     }
 }
