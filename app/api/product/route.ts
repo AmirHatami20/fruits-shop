@@ -3,6 +3,7 @@ import {connectDB} from "@/lib/mongoose";
 import {Product} from "@/lib/models/product";
 import mongoose from "mongoose";
 import {uploadImage} from "@/lib/uploadImage";
+import "@/lib/models/category";
 
 export async function POST(req: NextRequest) {
     try {
@@ -47,6 +48,7 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET() {
+
     try {
         await connectDB();
         const products = await Product.find().populate("category");
