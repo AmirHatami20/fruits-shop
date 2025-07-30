@@ -15,9 +15,6 @@ const vazirmatn = Vazirmatn({
 export const metadata: Metadata = {
     title: 'سایت فروش میوه جات',
     description: 'Redux + Next.js 15 setup',
-    icons: {
-        icon: "/Logo.ico"
-    }
 };
 
 export default function RootLayout({children}: { children: React.ReactNode }) {

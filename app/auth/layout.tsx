@@ -4,9 +4,6 @@ import Header from "@/components/Layout/Header";
 export const metadata: Metadata = {
     title: 'احراز هویت در سایت ما',
     description: 'Redux + Next.js 15 setup',
-    icons:{
-        icon:"/Logo.ico"
-    }
 };
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
